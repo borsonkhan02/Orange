@@ -3,7 +3,6 @@ package base;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 
 @Listeners(listener.EliteListener.class)
 public class TestBase extends Saucelabs {
@@ -17,11 +16,6 @@ public class TestBase extends Saucelabs {
 			setSauceLabs();
 		}
 		setDriver();
-
-	}
-
-	@Test
-	public void test() {
 
 	}
 
