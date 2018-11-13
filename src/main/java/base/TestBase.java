@@ -1,5 +1,32 @@
 package base;
 
-public class TestBase {
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
+@Listeners(listener.EliteListener.class)
+public class TestBase extends Saucelabs {
+
+	@BeforeSuite
+	public void setUp() {
+
+		if (Boolean.valueOf(getProperty("saucelab"))) {
+
+			// run on saucelabs;
+			setSauceLabs();
+		}
+		setDriver();
+
+	}
+
+	@Test
+	public void test() {
+
+	}
+
+	@AfterSuite
+	public void tearDown() {
+		driver.quit();
+	}
 }

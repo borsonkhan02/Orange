@@ -6,11 +6,6 @@ import java.util.Properties;
 
 public class ReadProperties {
 
-	public static void main(String[] args) {
-
-		System.out.println(getSoucelabsproperty("browser"));
-	}
-
 	public static String getSoucelabsproperty(String key) {
 		String value = null;
 
